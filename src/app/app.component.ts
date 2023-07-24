@@ -23,8 +23,6 @@ export class AppComponent {
   }
 
   public submit() {
-    console.log('form errors', this.form.errors)
-    console.log('amount', this.form.controls['amount'].errors)
     if (!this.form.valid) return;
 
     this.service.calcScore(this.form.value).subscribe((data) => {
